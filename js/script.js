@@ -32,36 +32,31 @@ function palindromeCheck(word) {
 
 
 //pari e dispari
+const userChoise = prompt('Scegli pari o dispari');
+console.log('Hai scelto: ' + userChoise);
+const userNumber = parseInt(prompt('Inserisci un numero intero da 1 a 5'));
+console.log('Hai scelto: ' + userNumber);
 
-let userChoise = prompt('Scegli pari o dispari');
-const userNum = parseInt(prompt('Inserisci un numero intero da 1 a 5'));
-//var randomNum;
-//divisibility();
+const randomPCNumber = randomNumber(1,5);
+console.log('Il PC sceglie il numero: ' + randomPCNumber);
+//funzione random
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+const numSum = userNumber + randomPCNumber;
+console.log('La somma è: ' + numSum);
 
-//generazione numero random con funzione
-for (let i = 0; i < 4; i++) {
-    randomNum = getRandomInt(1,5);
-}
-
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (min - max + 1)) + min;
-}
-console.log('Il computer sceglie: ' + getRandomInt);
-
-//funzione somma
-function somma(userNum, getRandomInt) {
-    return userNum + getRandomInt;
-}
-
-console.log('La somma dei numeri è: ' + somma);
-
-/*function divisibility(num) {
-    if (num % 2 == 0) {
-        console.log(num + ' è un numero pari');
+//condizione pari o dispari
+if ((isEven(numSum) && userChoise == 'pari') || (!isEven(numSum) && userChoise == 'dispari')) {
+    console.log('Hai Vinto!');
+} else {
+    console.log('Hai Perso!');
+};
+//funzione pari o dispari
+function isEven(number) {
+    if (number % 2 == 0) {
         return true;
     } else {
-        console.log(num + ' è un numero dispari');
         return false;
     }
-}*/
-
+};
