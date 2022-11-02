@@ -15,7 +15,7 @@ Consigli del giorno
 
 //
 
-/*const userWord = prompt('Inserisci una parola');
+const userWord = prompt('Inserisci una parola');
 
 if(palindromeCheck(userWord)) {
     console.log(userWord + ' è una parola palindroma!');
@@ -24,14 +24,15 @@ if(palindromeCheck(userWord)) {
 }
  
 function palindromeCheck(word) {
-    if (Array.from(word).toString() == (Array.from(word).reverse()).toString()) { return true;
-} else {
-    return false;
+    if (Array.from(word).toString() == Array.from(word).reverse().toString()) { 
+        return true;
+    } else {
+        return false;
 }}
-*/
 
 
-//pari e dispari
+
+/*//pari e dispari
 const userChoise = prompt('Scegli pari o dispari');
 console.log('Hai scelto: ' + userChoise);
 const userNumber = parseInt(prompt('Inserisci un numero intero da 1 a 5'));
@@ -59,4 +60,4 @@ function isEven(number) {
     } else {
         return false;
     }
-};
+};*/
